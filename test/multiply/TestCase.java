@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import java.Dollar;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
-class MultiplyTest {
+class TestCase {
 
     @Test
     public void testMultiplication() {
@@ -15,5 +15,11 @@ class MultiplyTest {
         assertEquals(10, product.amount);
         product = five.times(3);
         assertEquals(15, product.amount);
+    }
+
+    @Test
+    public void testEquality() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+        assertFalse(new Dollar(5).equals(new Dollar(6)));
     }
 }
