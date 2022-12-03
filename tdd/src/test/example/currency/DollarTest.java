@@ -1,4 +1,4 @@
-package java.currency;
+package example.currency;
 
 import org.junit.Test;
 
