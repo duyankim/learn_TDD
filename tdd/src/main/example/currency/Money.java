@@ -2,8 +2,7 @@ package example.currency;
 
 abstract class Money {
     abstract Money times(int mulitplier);
-    abstract String currency();
-
+    protected String currency;
     protected int amount;
 
     static Money dollar(int amount) {
@@ -12,6 +11,10 @@ abstract class Money {
 
     static Money franc(int amount) {
         return new Franc(amount);
+    }
+
+    String currency() {
+        return currency;
     }
 
     public boolean equals(Object object) {
