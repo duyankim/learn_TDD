@@ -10,8 +10,8 @@ class Franc extends Money{
         return new Franc(amount * multiplier);
     }
 
-    boolean equals(Object object) {
-        Money money = (Money) object;
-        return amount == money.amount;
+    @Override
+    String currency() {
+        return "CHF";
     }
 }
