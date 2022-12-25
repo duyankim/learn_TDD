@@ -3,13 +3,13 @@ package example.currency;
 class Franc extends Money{
     private String currency;
 
-    Franc(int amount) {
+    Franc(int amount, String currency) {
         this.amount = amount;
-        currency = "CHF";
+        this.currency = currency;
     }
 
-    Franc times(int multiplier) {
-        return new Franc(amount * multiplier);
+    Money times(int multiplier) {
+        return Money.franc(amount * multiplier);
     }
 
     @Override
